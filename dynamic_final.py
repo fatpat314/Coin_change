@@ -29,11 +29,19 @@ def calculate_change(amount, coins):
     print(cache)
     return(cache[amount])
 
-coins = [1,5,10,25]
-amount = 6
+coins = [2,3,6]
+amount = 7
 cache =[]
-expecting = 2
+
 
 
 
 print(f'To return {amount} it would take {calculate_change(amount, coins)} coins')
+
+def test_calculate_change():
+    result = 2
+    assert result == calculate_change(6, [1,5,10,25])
+    result = 2
+    assert result == calculate_change(7, [2,3,5])
+
+test_calculate_change()
